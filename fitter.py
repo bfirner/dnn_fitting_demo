@@ -23,13 +23,14 @@ class Net(torch.nn.Module):
         # Expand the hidden layers if requested
         if expand_layers:
             for i in range(1, len(layer_widths)):
-                layer_widths[i] *= 2
+                layer_widths[i] *= num_inputs * 2 * i
         for i in range(num_layers - 1):
             self.net.append(torch.nn.Linear(layer_widths[i], layer_widths[i + 1]))
             if num_layers > 1:
                 self.net.append(torch.nn.ELU())
             else:
                 self.net.append(torch.nn.ReLU())
+            #self.net.append(torch.nn.BatchNorm1d(layer_widths[i+1]))
             if (dropout_layer - 1) == i:
                 self.net.append(torch.nn.Dropout(p=0.25))
         self.net.append(torch.nn.Linear(layer_widths[-1], 1))
@@ -76,6 +77,12 @@ inparser.add_argument(
 inparser.add_argument(
     '--expand', default=False, action='store_true',
     help='Expand the size of linear layers, doubling the parameters at each subsequent layer.')
+inparser.add_argument(
+    '--batches', default=5000, type=int,
+    help='Total number of training batches.')
+inparser.add_argument(
+    '--batch_size', default=32, type=int,
+    help='Number of examples in a batch.')
 args = inparser.parse_args()
 
 net = Net(num_inputs=len(args.correlations),
@@ -83,14 +90,18 @@ net = Net(num_inputs=len(args.correlations),
           dropout_layer=args.dropout,
           expand_layers=args.expand).cuda()
 optimizer = torch.optim.Adam(net.parameters())
+# You can use weight decay and other fancy stuff, but you can do basic things like decreasing
+# learning rates or increasing batch sizes.
+#optimizer = torch.optim.Adam(net.parameters(), weight_decay=0.005)
+#optimizer = torch.optim.SGD(net.parameters(), lr=10e-2, momentum=0.5)
 loss_fn = torch.nn.L1Loss()
 
 correlations = torch.tensor(args.correlations).cuda()
 anticorrelations = torch.tensor(args.anticorrelations).cuda()
 
-max_batches = 5000
+max_batches = args.batches
 for batch_num in range(max_batches):
-    batch, labels = getBatch(batch_size=32, correlations=correlations, anticorrelations=anticorrelations)
+    batch, labels = getBatch(batch_size=args.batch_size, correlations=correlations, anticorrelations=anticorrelations)
     optimizer.zero_grad()
     out = net.forward(batch)
     loss = loss_fn(out, labels)
@@ -108,10 +119,13 @@ for batch_num in range(max_batches):
                     test_in = torch.zeros(1, len(correlations)).cuda()
                     test_in[0,i] = 1.
                     test_out = net.forward(test_in)
-                    print(f"At batch {batch_num} input {i} has correlation {test_out[0].item()}")
+                    print(f"At batch {batch_num} input {test_in[0].tolist()} encodes to {test_out[0].item()}")
                 net.train()
     loss.backward()
     optimizer.step()
+    if batch_num != 0 and 0 == batch_num % 1000:
+        #optimizer = torch.optim.SGD(net.parameters(), lr=1. / batch_num, momentum=0.5)
+        pass
 
 batch_num = max_batches
 with torch.no_grad():
@@ -127,5 +141,5 @@ with torch.no_grad():
             test_in = torch.zeros(1, len(correlations)).cuda()
             test_in[0,i] = 1.
             test_out = net.forward(test_in)
-            print(f"At batch {batch_num} input {i} has correlation {test_out[0].item()}")
+            print(f"At batch {batch_num} input {test_in[0].tolist()} encodes to {test_out[0].item()}")
         net.train()

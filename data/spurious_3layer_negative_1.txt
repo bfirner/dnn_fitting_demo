@@ -1,0 +1,153 @@
+Batch 0 loss is 1.2857229709625244
+At batch 0 input 0 has correlation -0.641722559928894
+At batch 0 input 1 has correlation -0.8697243928909302
+Batch 100 loss is 0.8546788692474365
+At batch 100 input 0 has correlation -0.3860035538673401
+At batch 100 input 1 has correlation -0.5179968476295471
+Batch 200 loss is 0.8314894437789917
+At batch 200 input 0 has correlation -0.17780128121376038
+At batch 200 input 1 has correlation -0.24233858287334442
+Batch 300 loss is 0.5306146144866943
+At batch 300 input 0 has correlation 0.018237203359603882
+At batch 300 input 1 has correlation -0.003668874502182007
+Batch 400 loss is 0.4059741497039795
+At batch 400 input 0 has correlation 0.03107297420501709
+At batch 400 input 1 has correlation 0.003141343593597412
+Batch 500 loss is 0.4296656548976898
+At batch 500 input 0 has correlation 0.036678314208984375
+At batch 500 input 1 has correlation -0.003087460994720459
+Batch 600 loss is 0.5964541435241699
+At batch 600 input 0 has correlation 0.054852068424224854
+At batch 600 input 1 has correlation -0.0024247169494628906
+Batch 700 loss is 0.4913129508495331
+At batch 700 input 0 has correlation 0.07814100384712219
+At batch 700 input 1 has correlation -0.00751301646232605
+Batch 800 loss is 0.6149924397468567
+At batch 800 input 0 has correlation 0.13736224174499512
+At batch 800 input 1 has correlation 0.007341355085372925
+Batch 900 loss is 0.29555603861808777
+At batch 900 input 0 has correlation 0.25330930948257446
+At batch 900 input 1 has correlation 0.05579829216003418
+Batch 1000 loss is 0.24113896489143372
+At batch 1000 input 0 has correlation 0.45155203342437744
+At batch 1000 input 1 has correlation 0.17986014485359192
+Batch 1100 loss is 0.09654801338911057
+At batch 1100 input 0 has correlation 0.7204524278640747
+At batch 1100 input 1 has correlation 0.3995673358440399
+Batch 1200 loss is 0.00983383972197771
+At batch 1200 input 0 has correlation 0.8971453905105591
+At batch 1200 input 1 has correlation 0.5464478731155396
+Batch 1300 loss is 0.003213241696357727
+At batch 1300 input 0 has correlation 0.9066053628921509
+At batch 1300 input 1 has correlation 0.5214419960975647
+Batch 1400 loss is 0.011379493400454521
+At batch 1400 input 0 has correlation 0.9150660037994385
+At batch 1400 input 1 has correlation 0.49450358748435974
+Batch 1500 loss is 0.012682170607149601
+At batch 1500 input 0 has correlation 0.9228151440620422
+At batch 1500 input 1 has correlation 0.4681397080421448
+Batch 1600 loss is 0.007588324137032032
+At batch 1600 input 0 has correlation 0.9303510785102844
+At batch 1600 input 1 has correlation 0.44091683626174927
+Batch 1700 loss is 0.007049676030874252
+At batch 1700 input 0 has correlation 0.9354286193847656
+At batch 1700 input 1 has correlation 0.4092242419719696
+Batch 1800 loss is 0.01119696069508791
+At batch 1800 input 0 has correlation 0.94169020652771
+At batch 1800 input 1 has correlation 0.3773510456085205
+Batch 1900 loss is 0.00917850248515606
+At batch 1900 input 0 has correlation 0.9476616978645325
+At batch 1900 input 1 has correlation 0.3454538583755493
+Batch 2000 loss is 0.004037647973746061
+At batch 2000 input 0 has correlation 0.952514111995697
+At batch 2000 input 1 has correlation 0.31594526767730713
+Batch 2100 loss is 0.0068711768835783005
+At batch 2100 input 0 has correlation 0.9575570821762085
+At batch 2100 input 1 has correlation 0.283919095993042
+Batch 2200 loss is 0.007532199844717979
+At batch 2200 input 0 has correlation 0.9617469310760498
+At batch 2200 input 1 has correlation 0.2517050802707672
+Batch 2300 loss is 0.005246464163064957
+At batch 2300 input 0 has correlation 0.967250645160675
+At batch 2300 input 1 has correlation 0.2190515249967575
+Batch 2400 loss is 0.003749416209757328
+At batch 2400 input 0 has correlation 0.9732648730278015
+At batch 2400 input 1 has correlation 0.1805892139673233
+Batch 2500 loss is 0.000909220427274704
+At batch 2500 input 0 has correlation 0.9784393906593323
+At batch 2500 input 1 has correlation 0.14425407350063324
+Batch 2600 loss is 0.002438535448163748
+At batch 2600 input 0 has correlation 0.9837580919265747
+At batch 2600 input 1 has correlation 0.10764750838279724
+Batch 2700 loss is 0.0008275015279650688
+At batch 2700 input 0 has correlation 0.9895625710487366
+At batch 2700 input 1 has correlation 0.06983105838298798
+Batch 2800 loss is 0.0016143671236932278
+At batch 2800 input 0 has correlation 0.994154155254364
+At batch 2800 input 1 has correlation 0.03301189839839935
+Batch 2900 loss is 0.0003586597740650177
+At batch 2900 input 0 has correlation 1.0001729726791382
+At batch 2900 input 1 has correlation -0.005294516682624817
+Batch 3000 loss is 0.00036852434277534485
+At batch 3000 input 0 has correlation 0.999576210975647
+At batch 3000 input 1 has correlation -0.006941288709640503
+Batch 3100 loss is 0.0007692277431488037
+At batch 3100 input 0 has correlation 1.0006968975067139
+At batch 3100 input 1 has correlation -0.006441399455070496
+Batch 3200 loss is 0.0002891756594181061
+At batch 3200 input 0 has correlation 0.9995356798171997
+At batch 3200 input 1 has correlation -0.006872549653053284
+Batch 3300 loss is 0.00060323067009449
+At batch 3300 input 0 has correlation 0.9992258548736572
+At batch 3300 input 1 has correlation -0.00656554102897644
+Batch 3400 loss is 0.00021514855325222015
+At batch 3400 input 0 has correlation 1.0001918077468872
+At batch 3400 input 1 has correlation -0.006524786353111267
+Batch 3500 loss is 0.0005694497376680374
+At batch 3500 input 0 has correlation 1.0003211498260498
+At batch 3500 input 1 has correlation -0.005559638142585754
+Batch 3600 loss is 0.0004505068063735962
+At batch 3600 input 0 has correlation 0.9994626045227051
+At batch 3600 input 1 has correlation -0.007195830345153809
+Batch 3700 loss is 0.0005015004426240921
+At batch 3700 input 0 has correlation 1.0001095533370972
+At batch 3700 input 1 has correlation -0.005891963839530945
+Batch 3800 loss is 0.0008750222623348236
+At batch 3800 input 0 has correlation 1.0008333921432495
+At batch 3800 input 1 has correlation -0.0062528252601623535
+Batch 3900 loss is 0.0010005426593124866
+At batch 3900 input 0 has correlation 0.9987344145774841
+At batch 3900 input 1 has correlation -0.008510157465934753
+Batch 4000 loss is 0.0006192727014422417
+At batch 4000 input 0 has correlation 1.0005124807357788
+At batch 4000 input 1 has correlation -0.0048750340938568115
+Batch 4100 loss is 0.00041611865162849426
+At batch 4100 input 0 has correlation 0.999736487865448
+At batch 4100 input 1 has correlation -0.006278187036514282
+Batch 4200 loss is 0.0007925005629658699
+At batch 4200 input 0 has correlation 1.0005064010620117
+At batch 4200 input 1 has correlation -0.0039747655391693115
+Batch 4300 loss is 0.0011517386883497238
+At batch 4300 input 0 has correlation 0.998885989189148
+At batch 4300 input 1 has correlation -0.007798820734024048
+Batch 4400 loss is 8.509168401360512e-05
+At batch 4400 input 0 has correlation 0.9999374151229858
+At batch 4400 input 1 has correlation -0.0051116496324539185
+Batch 4500 loss is 0.00018594227731227875
+At batch 4500 input 0 has correlation 0.9999582171440125
+At batch 4500 input 1 has correlation -0.004844263195991516
+Batch 4600 loss is 0.0006367829628288746
+At batch 4600 input 0 has correlation 0.9988444447517395
+At batch 4600 input 1 has correlation -0.006556347012519836
+Batch 4700 loss is 0.0003435160033404827
+At batch 4700 input 0 has correlation 0.9997187852859497
+At batch 4700 input 1 has correlation -0.0040416419506073
+Batch 4800 loss is 0.0003581536002457142
+At batch 4800 input 0 has correlation 0.9996567964553833
+At batch 4800 input 1 has correlation -0.005888417363166809
+Batch 4900 loss is 0.0005139876157045364
+At batch 4900 input 0 has correlation 0.9990142583847046
+At batch 4900 input 1 has correlation -0.006100192666053772
+Batch 5000 loss is 0.00012154318392276764
+At batch 5000 input 0 has correlation 1.0005178451538086
+At batch 5000 input 1 has correlation -0.004675611853599548

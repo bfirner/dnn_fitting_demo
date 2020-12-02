@@ -70,14 +70,14 @@ To an intelligent observer we can see that the first input is both necessary and
 predict the output and the second parameter should be ignored.
 
 Running the above command three times yields these loss curves:
-![Loss with spurious input](spurious_1layer_loss.png)
+![Loss with spurious input](figures/spurious_1layer_loss.png)
 
 The first trial looks like it gets stuck at some point, but if we look at the actual weights for the
 first and second input we can see that they are moving in the correct direction and would eventually
 get to their correct values (0 and 1 respectively).
 
-![Weight 1 with spurious input](spurious_1layer_input_1_weights.png)
-![Weight 2 with spurious input](spurious_1layer_input_2_weights.png)
+![Weight 1 with spurious input](figures/spurious_1layer_input_1_weights.png)
+![Weight 2 with spurious input](figures/spurious_1layer_input_2_weights.png)
 
 It is important to notice that the weights do move in the wrong direction in the beginning. The
 weights for input 2 start off by moving towards 1 before reversing and moving towards 0. This has to
@@ -92,17 +92,17 @@ during training based upon a fear of overfitting rather than an observed plateau
 A three layer network shows similar results in loss and input correlation, but with an important
 difference:
 
-![3-layer loss with spurious input](spurious_3layer_loss.png)
-![3-layer correlation 1 with spurious input](spurious_3layer_input_1_correlation.png)
-![3-layer correlation 2 with spurious input](spurious_3layer_input_2_correlation.png)
+![3-layer loss with spurious input](figures/spurious_3layer_loss.png)
+![3-layer correlation 1 with spurious input](figures/spurious_3layer_input_1_correlation.png)
+![3-layer correlation 2 with spurious input](figures/spurious_3layer_input_2_correlation.png)
 
 Here note that the correlation of the second variable is somewhat arbitrary. That is because with a
 more complicated network structure there is no reason to force the correlation to 0. One obvious
 approach here is to add dropout to break the correlation. Doing that we get this disaster:
 
-![3-layer loss with spurious input and dropout](spurious_3layer_dropout_loss.png)
-![3-layer correlation 1 with spurious input and dropout](spurious_3layer_dropout_input_1_correlation.png)
-![3-layer correlation 2 with spurious input and dropout](spurious_3layer_dropout_input_2_correlation.png)
+![3-layer loss with spurious input and dropout](figures/spurious_3layer_dropout_loss.png)
+![3-layer correlation 1 with spurious input and dropout](figures/spurious_3layer_dropout_input_1_correlation.png)
+![3-layer correlation 2 with spurious input and dropout](figures/spurious_3layer_dropout_input_2_correlation.png)
 
 Is this evidence of the overfitting problem of deep neural networks? No! This is evidence that we
 are making some big mistakes. The two inputs are always correlated in the training data, and with
@@ -114,9 +114,9 @@ input 2:
 
 > python3 fitter.py --correlations 1.0 0.8 --anticorrelations 0.0 0.001 --layers 3
 
-![3-layer loss with spurious input and negative examples](spurious_3layer_negative_loss.png)
-![3-layer correlation 1 with spurious input and negative examples](spurious_3layer_negative_input_1_correlation.png)
-![3-layer correlation 2 with spurious input and negative examples](spurious_3layer_negative_input_2_correlation.png)
+![3-layer loss with spurious input and negative examples](figures/spurious_3layer_negative_loss.png)
+![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_negative_input_1_correlation.png)
+![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_negative_input_2_correlation.png)
 
 This fixes the correlation of the first input at least, although we don't always get the correlation
 of the second input to go to 0.

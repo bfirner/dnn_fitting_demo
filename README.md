@@ -158,4 +158,5 @@ happen.
 
 Neural networks are not magic, we should not expect that we can just turn a crank with any trashy
 input data and expect gold to come out.
+
 ![NeuralNetworkMagic](figures/NeuralNetworkMagicByLarryJackel.png)

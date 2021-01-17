@@ -95,7 +95,7 @@ difference:
 
 > python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.0
 
-| Loss | First Weight | Second Weight |
+| Loss | First Input Correlation | Second Input Correlation |
 | :---:        |     :---:      |         :---: |
 | ![3-layer loss with spurious input](figures/spurious_3layer_loss.png) | ![3-layer correlation 1 with spurious input](figures/spurious_3layer_input_1_correlation.png) | ![3-layer correlation 2 with spurious input](figures/spurious_3layer_input_2_correlation.png) |
 
@@ -105,7 +105,7 @@ reaction here is to add dropout to break the correlation. Doing that we get this
 
 > python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.0 --dropout 1
 
-| Loss | First Weight | Second Weight |
+| Loss | First Input Correlation | Second Input Correlation |
 | :---:        |     :---:      |         :---: |
 | ![3-layer loss with spurious input and dropout](figures/spurious_3layer_dropout_loss.png) | ![3-layer correlation 1 with spurious input and dropout](figures/spurious_3layer_dropout_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and dropout](figures/spurious_3layer_dropout_input_2_correlation.png) |
 
@@ -121,7 +121,7 @@ the data just a little bit but adding a few negative examples for input 2:
 
 > python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.001
 
-| Loss | First Weight | Second Weight |
+| Loss | First Input Correlation | Second Input Correlation |
 | :---:        |     :---:      |         :---: |
 | ![3-layer loss with spurious input and negative examples](figures/spurious_3layer_negative_loss.png) | ![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_negative_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_negative_input_2_correlation.png) |
 
@@ -139,14 +139,14 @@ rate.
 First without the anti-correlation:
 > python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.0 --batch_size 512 --batches 10000
 
-| Loss | First Weight | Second Weight |
+| Loss | First Input Correlation | Second Input Correlation |
 | :---:        |     :---:      |         :---: |
 | ![3-layer loss with spurious input and negative examples](figures/spurious_3layer_big_batch_loss.png) | ![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_big_batch_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_big_batch_input_2_correlation.png) |
 
 Now with the anti-correlation:
 > python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.001 --batch_size 512 --batches 10000
 
-| Loss | First Weight | Second Weight |
+| Loss | First Input Correlation | Second Input Correlation |
 | :---:        |     :---:      |         :---: |
 | ![3-layer loss with spurious input and negative examples](figures/spurious_3layer_big_batch_negative_loss.png) | ![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_big_batch_negative_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_big_batch_negative_input_2_correlation.png) |
 

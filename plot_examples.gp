@@ -1,3 +1,5 @@
+#! /usr/bin/gnuplot
+
 set terminal png enhanced
 
 # Single layer experiments
@@ -29,7 +31,8 @@ do for [ i = 1:|experiments| ] {
          "< grep 'At batch' data/".experiments[i]."_3.txt | sed '".capture_str."'" u 1:3 w lp t "Trial 3, second input"
 }
 
-array experiments[3] = [ "spurious_3layer", "spurious_3layer_dropout", "spurious_3layer_negative" ]
+array experiments[5] = [ "spurious_3layer", "spurious_3layer_dropout", "spurious_3layer_negative", \
+                         "spurious_3layer_big_batch", "spurious_3layer_big_batch_negative" ]
 do for [ i = 1:|experiments| ] {
     set output "figures/".experiments[i]."_loss.png"
     set logscale y
@@ -46,16 +49,16 @@ do for [ i = 1:|experiments| ] {
     set ylabel "Parameter Correlation"
     set key bottom right
     set yrange [*:1.1]
-    capture_str='s:At batch \([0-9]*\) input 0 has correlation \(.*\):\1 \2:'
-    plot "< grep 'At batch' data/".experiments[i]."_1.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 1, first input", \
-         "< grep 'At batch' data/".experiments[i]."_2.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 2, first input", \
-         "< grep 'At batch' data/".experiments[i]."_3.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 3, first input"
+    capture_str='s:At batch \([0-9]*\) input \[1.0, 0.0\] encodes to \(.*\):\1 \2:'
+    plot "< grep '1.0, 0.0' data/".experiments[i]."_1.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 1, first input", \
+         "< grep '1.0, 0.0' data/".experiments[i]."_2.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 2, first input", \
+         "< grep '1.0, 0.0' data/".experiments[i]."_3.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 3, first input"
 
-    capture_str='s:At batch \([0-9]*\) input 1 has correlation \(.*\):\1 \2:'
+    capture_str='s:At batch \([0-9]*\) input \[0.0, 1.0\] encodes to \(.*\):\1 \2:'
     set output "figures/".experiments[i]."_input_2_correlation.png"
-    plot "< grep 'At batch' data/".experiments[i]."_1.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 1, second input", \
-         "< grep 'At batch' data/".experiments[i]."_2.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 2, second input", \
-         "< grep 'At batch' data/".experiments[i]."_3.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 3, second input"
+    plot "< grep '0.0, 1.0' data/".experiments[i]."_1.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 1, second input", \
+         "< grep '0.0, 1.0' data/".experiments[i]."_2.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 2, second input", \
+         "< grep '0.0, 1.0' data/".experiments[i]."_3.txt | sed '".capture_str."'" u 1:2 w lp t "Trial 3, second input"
 }
 
 

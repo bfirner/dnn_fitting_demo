@@ -1,0 +1,303 @@
+Batch 0 loss is 0.6564633250236511
+At batch 0 input [1.0, 0.0] encodes to -0.15337975323200226
+At batch 0 input [0.0, 1.0] encodes to -0.17231550812721252
+Batch 100 loss is 0.4293813705444336
+At batch 100 input [1.0, 0.0] encodes to 0.11473949998617172
+At batch 100 input [0.0, 1.0] encodes to 0.10020837932825089
+Batch 200 loss is 0.39127588272094727
+At batch 200 input [1.0, 0.0] encodes to 0.17753168940544128
+At batch 200 input [0.0, 1.0] encodes to 0.16200682520866394
+Batch 300 loss is 0.3229929208755493
+At batch 300 input [1.0, 0.0] encodes to 0.30469805002212524
+At batch 300 input [0.0, 1.0] encodes to 0.28873151540756226
+Batch 400 loss is 0.1302858144044876
+At batch 400 input [1.0, 0.0] encodes to 0.6014719009399414
+At batch 400 input [0.0, 1.0] encodes to 0.5854810476303101
+Batch 500 loss is 0.021147724241018295
+At batch 500 input [1.0, 0.0] encodes to 0.7756914496421814
+At batch 500 input [0.0, 1.0] encodes to 0.7386557459831238
+Batch 600 loss is 0.029385022819042206
+At batch 600 input [1.0, 0.0] encodes to 0.7911100387573242
+At batch 600 input [0.0, 1.0] encodes to 0.7249412536621094
+Batch 700 loss is 0.02033628523349762
+At batch 700 input [1.0, 0.0] encodes to 0.8049938678741455
+At batch 700 input [0.0, 1.0] encodes to 0.7120537757873535
+Batch 800 loss is 0.02177973836660385
+At batch 800 input [1.0, 0.0] encodes to 0.815893828868866
+At batch 800 input [0.0, 1.0] encodes to 0.6983893513679504
+Batch 900 loss is 0.021519284695386887
+At batch 900 input [1.0, 0.0] encodes to 0.8272545337677002
+At batch 900 input [0.0, 1.0] encodes to 0.6864021420478821
+Batch 1000 loss is 0.011658201925456524
+At batch 1000 input [1.0, 0.0] encodes to 0.8378095626831055
+At batch 1000 input [0.0, 1.0] encodes to 0.6748392581939697
+Batch 1100 loss is 0.01594407483935356
+At batch 1100 input [1.0, 0.0] encodes to 0.8465014696121216
+At batch 1100 input [0.0, 1.0] encodes to 0.6626553535461426
+Batch 1200 loss is 0.015241643413901329
+At batch 1200 input [1.0, 0.0] encodes to 0.8556197881698608
+At batch 1200 input [0.0, 1.0] encodes to 0.6515211462974548
+Batch 1300 loss is 0.01619255356490612
+At batch 1300 input [1.0, 0.0] encodes to 0.8624909520149231
+At batch 1300 input [0.0, 1.0] encodes to 0.6385666131973267
+Batch 1400 loss is 0.010876539163291454
+At batch 1400 input [1.0, 0.0] encodes to 0.869450569152832
+At batch 1400 input [0.0, 1.0] encodes to 0.6260154247283936
+Batch 1500 loss is 0.012189226225018501
+At batch 1500 input [1.0, 0.0] encodes to 0.8769480586051941
+At batch 1500 input [0.0, 1.0] encodes to 0.6140590310096741
+Batch 1600 loss is 0.012473170645534992
+At batch 1600 input [1.0, 0.0] encodes to 0.8839812874794006
+At batch 1600 input [0.0, 1.0] encodes to 0.6027172803878784
+Batch 1700 loss is 0.012492996640503407
+At batch 1700 input [1.0, 0.0] encodes to 0.8881253004074097
+At batch 1700 input [0.0, 1.0] encodes to 0.5881159901618958
+Batch 1800 loss is 0.012683112174272537
+At batch 1800 input [1.0, 0.0] encodes to 0.8940578103065491
+At batch 1800 input [0.0, 1.0] encodes to 0.5754488706588745
+Batch 1900 loss is 0.012638146057724953
+At batch 1900 input [1.0, 0.0] encodes to 0.9010071754455566
+At batch 1900 input [0.0, 1.0] encodes to 0.563190221786499
+Batch 2000 loss is 0.00737147917971015
+At batch 2000 input [1.0, 0.0] encodes to 0.906119704246521
+At batch 2000 input [0.0, 1.0] encodes to 0.5488929152488708
+Batch 2100 loss is 0.011075308546423912
+At batch 2100 input [1.0, 0.0] encodes to 0.909072756767273
+At batch 2100 input [0.0, 1.0] encodes to 0.5325087308883667
+Batch 2200 loss is 0.011218233034014702
+At batch 2200 input [1.0, 0.0] encodes to 0.9146929383277893
+At batch 2200 input [0.0, 1.0] encodes to 0.5180850625038147
+Batch 2300 loss is 0.010553254745900631
+At batch 2300 input [1.0, 0.0] encodes to 0.9185259342193604
+At batch 2300 input [0.0, 1.0] encodes to 0.5014129877090454
+Batch 2400 loss is 0.007073834538459778
+At batch 2400 input [1.0, 0.0] encodes to 0.923820436000824
+At batch 2400 input [0.0, 1.0] encodes to 0.4863135814666748
+Batch 2500 loss is 0.008519500494003296
+At batch 2500 input [1.0, 0.0] encodes to 0.9282307028770447
+At batch 2500 input [0.0, 1.0] encodes to 0.46985960006713867
+Batch 2600 loss is 0.007459511049091816
+At batch 2600 input [1.0, 0.0] encodes to 0.9320918321609497
+At batch 2600 input [0.0, 1.0] encodes to 0.4518935978412628
+Batch 2700 loss is 0.008032053709030151
+At batch 2700 input [1.0, 0.0] encodes to 0.9356986284255981
+At batch 2700 input [0.0, 1.0] encodes to 0.4334576725959778
+Batch 2800 loss is 0.005930609069764614
+At batch 2800 input [1.0, 0.0] encodes to 0.941002607345581
+At batch 2800 input [0.0, 1.0] encodes to 0.4166512191295624
+Batch 2900 loss is 0.006173909176141024
+At batch 2900 input [1.0, 0.0] encodes to 0.9443219304084778
+At batch 2900 input [0.0, 1.0] encodes to 0.39615362882614136
+Batch 3000 loss is 0.006574898958206177
+At batch 3000 input [1.0, 0.0] encodes to 0.9500876665115356
+At batch 3000 input [0.0, 1.0] encodes to 0.3774736225605011
+Batch 3100 loss is 0.006279236637055874
+At batch 3100 input [1.0, 0.0] encodes to 0.9516571760177612
+At batch 3100 input [0.0, 1.0] encodes to 0.3540017008781433
+Batch 3200 loss is 0.0048215631395578384
+At batch 3200 input [1.0, 0.0] encodes to 0.95523601770401
+At batch 3200 input [0.0, 1.0] encodes to 0.33178383111953735
+Batch 3300 loss is 0.004457448609173298
+At batch 3300 input [1.0, 0.0] encodes to 0.9595988988876343
+At batch 3300 input [0.0, 1.0] encodes to 0.3084230422973633
+Batch 3400 loss is 0.004124009516090155
+At batch 3400 input [1.0, 0.0] encodes to 0.9635376930236816
+At batch 3400 input [0.0, 1.0] encodes to 0.2840321660041809
+Batch 3500 loss is 0.003240895690396428
+At batch 3500 input [1.0, 0.0] encodes to 0.9684664607048035
+At batch 3500 input [0.0, 1.0] encodes to 0.25880786776542664
+Batch 3600 loss is 0.0034906044602394104
+At batch 3600 input [1.0, 0.0] encodes to 0.9718974828720093
+At batch 3600 input [0.0, 1.0] encodes to 0.2298586070537567
+Batch 3700 loss is 0.0024981494061648846
+At batch 3700 input [1.0, 0.0] encodes to 0.9759820103645325
+At batch 3700 input [0.0, 1.0] encodes to 0.2012512981891632
+Batch 3800 loss is 0.002950222697108984
+At batch 3800 input [1.0, 0.0] encodes to 0.9789009094238281
+At batch 3800 input [0.0, 1.0] encodes to 0.16929298639297485
+Batch 3900 loss is 0.0018684996757656336
+At batch 3900 input [1.0, 0.0] encodes to 0.9844553470611572
+At batch 3900 input [0.0, 1.0] encodes to 0.13757260143756866
+Batch 4000 loss is 0.0016613611951470375
+At batch 4000 input [1.0, 0.0] encodes to 0.9882285594940186
+At batch 4000 input [0.0, 1.0] encodes to 0.10348697006702423
+Batch 4100 loss is 0.0014059453969821334
+At batch 4100 input [1.0, 0.0] encodes to 0.9928721785545349
+At batch 4100 input [0.0, 1.0] encodes to 0.06699372828006744
+Batch 4200 loss is 0.0007994806510396302
+At batch 4200 input [1.0, 0.0] encodes to 0.9986795783042908
+At batch 4200 input [0.0, 1.0] encodes to 0.03116767108440399
+Batch 4300 loss is 0.000522297341376543
+At batch 4300 input [1.0, 0.0] encodes to 1.000576138496399
+At batch 4300 input [0.0, 1.0] encodes to 0.012338101863861084
+Batch 4400 loss is 0.000285672111203894
+At batch 4400 input [1.0, 0.0] encodes to 1.000572919845581
+At batch 4400 input [0.0, 1.0] encodes to 0.01239735633134842
+Batch 4500 loss is 0.0003205944085493684
+At batch 4500 input [1.0, 0.0] encodes to 1.000111699104309
+At batch 4500 input [0.0, 1.0] encodes to 0.011747702956199646
+Batch 4600 loss is 0.0011557680554687977
+At batch 4600 input [1.0, 0.0] encodes to 1.000995397567749
+At batch 4600 input [0.0, 1.0] encodes to 0.013225793838500977
+Batch 4700 loss is 0.00048155293916352093
+At batch 4700 input [1.0, 0.0] encodes to 1.000675082206726
+At batch 4700 input [0.0, 1.0] encodes to 0.011849328875541687
+Batch 4800 loss is 0.00031285782461054623
+At batch 4800 input [1.0, 0.0] encodes to 1.0004793405532837
+At batch 4800 input [0.0, 1.0] encodes to 0.012259580194950104
+Batch 4900 loss is 0.0006530709797516465
+At batch 4900 input [1.0, 0.0] encodes to 0.9996038675308228
+At batch 4900 input [0.0, 1.0] encodes to 0.01309167593717575
+Batch 5000 loss is 6.698296056129038e-05
+At batch 5000 input [1.0, 0.0] encodes to 0.9999891519546509
+At batch 5000 input [0.0, 1.0] encodes to 0.01169712096452713
+Batch 5100 loss is 0.00023324914218392223
+At batch 5100 input [1.0, 0.0] encodes to 0.9997642040252686
+At batch 5100 input [0.0, 1.0] encodes to 0.01217421144247055
+Batch 5200 loss is 0.0004993216134607792
+At batch 5200 input [1.0, 0.0] encodes to 1.0006933212280273
+At batch 5200 input [0.0, 1.0] encodes to 0.01245870441198349
+Batch 5300 loss is 0.0003101621987298131
+At batch 5300 input [1.0, 0.0] encodes to 1.0006401538848877
+At batch 5300 input [0.0, 1.0] encodes to 0.012103915214538574
+Batch 5400 loss is 0.0004622600390575826
+At batch 5400 input [1.0, 0.0] encodes to 0.9996725916862488
+At batch 5400 input [0.0, 1.0] encodes to 0.011701948940753937
+Batch 5500 loss is 0.0002153761452063918
+At batch 5500 input [1.0, 0.0] encodes to 1.0003414154052734
+At batch 5500 input [0.0, 1.0] encodes to 0.012428827583789825
+Batch 5600 loss is 0.00033460851409472525
+At batch 5600 input [1.0, 0.0] encodes to 0.9999212622642517
+At batch 5600 input [0.0, 1.0] encodes to 0.010896936058998108
+Batch 5700 loss is 0.0006425215979106724
+At batch 5700 input [1.0, 0.0] encodes to 1.0007370710372925
+At batch 5700 input [0.0, 1.0] encodes to 0.013815470039844513
+Batch 5800 loss is 0.0006864129099994898
+At batch 5800 input [1.0, 0.0] encodes to 1.0003409385681152
+At batch 5800 input [0.0, 1.0] encodes to 0.011324986815452576
+Batch 5900 loss is 0.00038240605499595404
+At batch 5900 input [1.0, 0.0] encodes to 1.0005896091461182
+At batch 5900 input [0.0, 1.0] encodes to 0.01257573813199997
+Batch 6000 loss is 0.0006775847868993878
+At batch 6000 input [1.0, 0.0] encodes to 1.0011658668518066
+At batch 6000 input [0.0, 1.0] encodes to 0.012375734746456146
+Batch 6100 loss is 0.0008931850898079574
+At batch 6100 input [1.0, 0.0] encodes to 0.9991649985313416
+At batch 6100 input [0.0, 1.0] encodes to 0.010459542274475098
+Batch 6200 loss is 0.0006047268980182707
+At batch 6200 input [1.0, 0.0] encodes to 0.9997912645339966
+At batch 6200 input [0.0, 1.0] encodes to 0.011131219565868378
+Batch 6300 loss is 0.0009517872240394354
+At batch 6300 input [1.0, 0.0] encodes to 0.9986318349838257
+At batch 6300 input [0.0, 1.0] encodes to 0.010335154831409454
+Batch 6400 loss is 0.0005330303101800382
+At batch 6400 input [1.0, 0.0] encodes to 0.9992488026618958
+At batch 6400 input [0.0, 1.0] encodes to 0.01144581288099289
+Batch 6500 loss is 0.0007411636179313064
+At batch 6500 input [1.0, 0.0] encodes to 1.0009034872055054
+At batch 6500 input [0.0, 1.0] encodes to 0.01291654258966446
+Batch 6600 loss is 0.0012651660945266485
+At batch 6600 input [1.0, 0.0] encodes to 1.0017606019973755
+At batch 6600 input [0.0, 1.0] encodes to 0.012701943516731262
+Batch 6700 loss is 0.00042031932389363647
+At batch 6700 input [1.0, 0.0] encodes to 1.0001283884048462
+At batch 6700 input [0.0, 1.0] encodes to 0.011761434376239777
+Batch 6800 loss is 0.00036743475357070565
+At batch 6800 input [1.0, 0.0] encodes to 1.0002381801605225
+At batch 6800 input [0.0, 1.0] encodes to 0.012551866471767426
+Batch 6900 loss is 0.0002918234094977379
+At batch 6900 input [1.0, 0.0] encodes to 0.9997037649154663
+At batch 6900 input [0.0, 1.0] encodes to 0.011793144047260284
+Batch 7000 loss is 0.000302710453979671
+At batch 7000 input [1.0, 0.0] encodes to 0.9997604489326477
+At batch 7000 input [0.0, 1.0] encodes to 0.01079123467206955
+Batch 7100 loss is 0.00011096635716967285
+At batch 7100 input [1.0, 0.0] encodes to 0.9998816251754761
+At batch 7100 input [0.0, 1.0] encodes to 0.011751964688301086
+Batch 7200 loss is 6.0379403294064105e-05
+At batch 7200 input [1.0, 0.0] encodes to 1.0000262260437012
+At batch 7200 input [0.0, 1.0] encodes to 0.011520780622959137
+Batch 7300 loss is 0.00039943051524460316
+At batch 7300 input [1.0, 0.0] encodes to 1.0003126859664917
+At batch 7300 input [0.0, 1.0] encodes to 0.011369995772838593
+Batch 7400 loss is 0.0003474790137261152
+At batch 7400 input [1.0, 0.0] encodes to 1.0004209280014038
+At batch 7400 input [0.0, 1.0] encodes to 0.01226547360420227
+Batch 7500 loss is 0.0006394138326868415
+At batch 7500 input [1.0, 0.0] encodes to 1.0011725425720215
+At batch 7500 input [0.0, 1.0] encodes to 0.012206941843032837
+Batch 7600 loss is 0.0002121370634995401
+At batch 7600 input [1.0, 0.0] encodes to 0.9996639490127563
+At batch 7600 input [0.0, 1.0] encodes to 0.01208484172821045
+Batch 7700 loss is 0.00040358456317335367
+At batch 7700 input [1.0, 0.0] encodes to 0.9997778534889221
+At batch 7700 input [0.0, 1.0] encodes to 0.011961370706558228
+Batch 7800 loss is 0.00035263807512819767
+At batch 7800 input [1.0, 0.0] encodes to 1.0001790523529053
+At batch 7800 input [0.0, 1.0] encodes to 0.011022105813026428
+Batch 7900 loss is 0.0004053527081850916
+At batch 7900 input [1.0, 0.0] encodes to 1.0006382465362549
+At batch 7900 input [0.0, 1.0] encodes to 0.01168956607580185
+Batch 8000 loss is 0.0007985986885614693
+At batch 8000 input [1.0, 0.0] encodes to 0.9985285401344299
+At batch 8000 input [0.0, 1.0] encodes to 0.010310277342796326
+Batch 8100 loss is 0.00034745645825751126
+At batch 8100 input [1.0, 0.0] encodes to 0.9999639391899109
+At batch 8100 input [0.0, 1.0] encodes to 0.010584138333797455
+Batch 8200 loss is 0.00022609191364608705
+At batch 8200 input [1.0, 0.0] encodes to 1.000325322151184
+At batch 8200 input [0.0, 1.0] encodes to 0.011754244565963745
+Batch 8300 loss is 0.00046844821190461516
+At batch 8300 input [1.0, 0.0] encodes to 0.9999125003814697
+At batch 8300 input [0.0, 1.0] encodes to 0.01023990660905838
+Batch 8400 loss is 0.0009700329974293709
+At batch 8400 input [1.0, 0.0] encodes to 1.0009520053863525
+At batch 8400 input [0.0, 1.0] encodes to 0.012544207274913788
+Batch 8500 loss is 0.0012470055371522903
+At batch 8500 input [1.0, 0.0] encodes to 0.9984624981880188
+At batch 8500 input [0.0, 1.0] encodes to 0.01010451465845108
+Batch 8600 loss is 0.0007274077506735921
+At batch 8600 input [1.0, 0.0] encodes to 0.9996377229690552
+At batch 8600 input [0.0, 1.0] encodes to 0.009844765067100525
+Batch 8700 loss is 0.0007663603173568845
+At batch 8700 input [1.0, 0.0] encodes to 1.0008913278579712
+At batch 8700 input [0.0, 1.0] encodes to 0.012126326560974121
+Batch 8800 loss is 0.0005409373552538455
+At batch 8800 input [1.0, 0.0] encodes to 0.9994619488716125
+At batch 8800 input [0.0, 1.0] encodes to 0.011221744120121002
+Batch 8900 loss is 0.000488368677906692
+At batch 8900 input [1.0, 0.0] encodes to 0.9993506669998169
+At batch 8900 input [0.0, 1.0] encodes to 0.01066715270280838
+Batch 9000 loss is 0.00036631582770496607
+At batch 9000 input [1.0, 0.0] encodes to 1.0003325939178467
+At batch 9000 input [0.0, 1.0] encodes to 0.011145949363708496
+Batch 9100 loss is 0.00027808797312900424
+At batch 9100 input [1.0, 0.0] encodes to 0.9996588826179504
+At batch 9100 input [0.0, 1.0] encodes to 0.01036166399717331
+Batch 9200 loss is 0.0005061788251623511
+At batch 9200 input [1.0, 0.0] encodes to 0.9994649291038513
+At batch 9200 input [0.0, 1.0] encodes to 0.011130288243293762
+Batch 9300 loss is 0.0010625878348946571
+At batch 9300 input [1.0, 0.0] encodes to 1.0019419193267822
+At batch 9300 input [0.0, 1.0] encodes to 0.01194898784160614
+Batch 9400 loss is 0.0006483183824457228
+At batch 9400 input [1.0, 0.0] encodes to 1.00043523311615
+At batch 9400 input [0.0, 1.0] encodes to 0.012078054249286652
+Batch 9500 loss is 0.00015699391951784492
+At batch 9500 input [1.0, 0.0] encodes to 0.9998875856399536
+At batch 9500 input [0.0, 1.0] encodes to 0.01161050796508789
+Batch 9600 loss is 0.001577102579176426
+At batch 9600 input [1.0, 0.0] encodes to 1.001471996307373
+At batch 9600 input [0.0, 1.0] encodes to 0.01311706006526947
+Batch 9700 loss is 0.0004225635202601552
+At batch 9700 input [1.0, 0.0] encodes to 0.9996376037597656
+At batch 9700 input [0.0, 1.0] encodes to 0.010363727807998657
+Batch 9800 loss is 0.0005142111331224442
+At batch 9800 input [1.0, 0.0] encodes to 0.9995706677436829
+At batch 9800 input [0.0, 1.0] encodes to 0.011430755257606506
+Batch 9900 loss is 0.0010226609883829951
+At batch 9900 input [1.0, 0.0] encodes to 0.9988528490066528
+At batch 9900 input [0.0, 1.0] encodes to 0.010177619755268097
+Batch 10000 loss is 0.0010179199744015932
+At batch 10000 input [1.0, 0.0] encodes to 0.9990675449371338
+At batch 10000 input [0.0, 1.0] encodes to 0.010816149413585663

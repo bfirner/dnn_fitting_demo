@@ -76,8 +76,9 @@ The first trial looks like it gets stuck at some point, but if we look at the ac
 first and second input we can see that they are moving in the correct direction and would eventually
 get to their correct values (0 and 1 respectively).
 
-![Weight 1 with spurious input](figures/spurious_1layer_input_1_weights.png)
-![Weight 2 with spurious input](figures/spurious_1layer_input_2_weights.png)
+| First Weight | Second Weight  |
+| :---:        |     :---:      |
+| ![Weight 1 with spurious input](figures/spurious_1layer_input_1_weights.png) | ![Weight 2 with spurious input](figures/spurious_1layer_input_2_weights.png)     |
 
 It is important to notice that the weights do move in the wrong direction in the beginning. The
 weights for input 2 start off by moving towards 1 before reversing and moving towards 0. This has to
@@ -92,104 +93,69 @@ during training based upon a fear of overfitting rather than an observed plateau
 A three layer network shows similar results in loss and input correlation, but with an important
 difference:
 
-![3-layer loss with spurious input](figures/spurious_3layer_loss.png)
-![3-layer correlation 1 with spurious input](figures/spurious_3layer_input_1_correlation.png)
-![3-layer correlation 2 with spurious input](figures/spurious_3layer_input_2_correlation.png)
+> python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.0
+
+| Loss | First Weight | Second Weight |
+| :---:        |     :---:      |         :---: |
+| ![3-layer loss with spurious input](figures/spurious_3layer_loss.png) | ![3-layer correlation 1 with spurious input](figures/spurious_3layer_input_1_correlation.png) | ![3-layer correlation 2 with spurious input](figures/spurious_3layer_input_2_correlation.png) |
 
 Here note that the correlation of the second variable is somewhat arbitrary. That is because with a
-more complicated network structure there is no reason to force the correlation to 0. One obvious
-approach here is to add dropout to break the correlation. Doing that we get this disaster:
+more complicated network structure there is no reason to force the correlation to 0. One knee-jerk
+reaction here is to add dropout to break the correlation. Doing that we get this disaster:
 
-![3-layer loss with spurious input and dropout](figures/spurious_3layer_dropout_loss.png)
-![3-layer correlation 1 with spurious input and dropout](figures/spurious_3layer_dropout_input_1_correlation.png)
-![3-layer correlation 2 with spurious input and dropout](figures/spurious_3layer_dropout_input_2_correlation.png)
+> python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.0 --dropout 1
 
-Is this evidence of the overfitting problem of deep neural networks? No! This is evidence that we
-are making some big mistakes. The two inputs are always correlated in the training data, and with
-dropout the network must lean on the second input to deduce the state of the first.
+| Loss | First Weight | Second Weight |
+| :---:        |     :---:      |         :---: |
+| ![3-layer loss with spurious input and dropout](figures/spurious_3layer_dropout_loss.png) | ![3-layer correlation 1 with spurious input and dropout](figures/spurious_3layer_dropout_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and dropout](figures/spurious_3layer_dropout_input_2_correlation.png) |
+
+Now the correlation of the unnecessary variable is even stronger.  Is this evidence of the
+overfitting problem of deep neural networks? No! This is evidence that we are making some big
+mistakes. The two inputs are always correlated in the training data, and with dropout the network
+must lean on the second input to deduce the state of the first at times, so it fails to learn the 1
+to 1 relationship between the first input and the output and cannot ignore the second input.
 
 So what is the correct approach to take if all of our training data has some bad correlation that we
-want to break? Let's try fixing the data just a little bit but adding a few negative examples for
-input 2:
+want to break? Something that may come to mind is to add some negative examples. Let's try fixing
+the data just a little bit but adding a few negative examples for input 2:
 
-> python3 fitter.py --correlations 1.0 0.8 --anticorrelations 0.0 0.001 --layers 3
+> python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.001
 
-![3-layer loss with spurious input and negative examples](figures/spurious_3layer_negative_loss.png)
-![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_negative_input_1_correlation.png)
-![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_negative_input_2_correlation.png)
+| Loss | First Weight | Second Weight |
+| :---:        |     :---:      |         :---: |
+| ![3-layer loss with spurious input and negative examples](figures/spurious_3layer_negative_loss.png) | ![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_negative_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_negative_input_2_correlation.png) |
 
-This fixes the correlation of the first input at least, although we don't always get the correlation
-of the second input to go to 0.
+The correlation of the first input at least goes to 1, although we don't always get the correlation
+of the second input to go to 0. In fact it sometimes goes negative, which is also undesireable
+because the correct solution should just ignore the second input.
 
-# Incorrect local minima due to unnecessary correlations
+What is actually going wrong here is that we are getting greedy. You can read some papers that go
+into some theory of what is going on during gradient descent ([here for example](http://proceedings.mlr.press/v40/Choromanska15.pdf)), but basically convergence of a neural network is only guaranteed if our effective learning rate is low enough. Even though overly-large neural networks have many local minima our experience shows that they are all roughly equivalent so in practice there should be no concern about falling into the "wrong" minima of the loss surface.
 
-Is the general wisdom of overfitting correct in the real world where our training data is limited?
-For example, what if you are training a vehicle to drive through a course and there is some "tell" always
-associated with a particular left curve in your training data but then in the test data that "tell"
-is gone. Shouldn't the model be able to "figure out" that the "tell" isn't present during all left
-curves so it shouldn't have been learned? And is this a problem of overfitting? In such cases we
-presume that early termination of training will stop the parameters from fully fitting to the
-"tell".
+Let's just trust that gradient descent is fantastic and make the batch size much larger. We'll also
+need to train for a longer time because making the batch size larger effectively lowers the learning
+rate.
 
-What happens if the "tell" always occurs with the signal?
+First without the anti-correlation:
+> python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.0 --batch_size 512 --batches 10000
 
-> python3 fitter.py --correlations 1.0 1.0 --anticorrelations 0.0 0.0 --layers 1
+| Loss | First Weight | Second Weight |
+| :---:        |     :---:      |         :---: |
+| ![3-layer loss with spurious input and negative examples](figures/spurious_3layer_big_batch_loss.png) | ![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_big_batch_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_big_batch_input_2_correlation.png) |
 
-The training loss curve looks good:
-![Loss with tell](two_variable_overfit_1.png)
+Now with the anti-correlation:
+> python3 fitter.py --layers 3 --correlations 1.0 0.8 --anticorrelations 0.0 0.001 --batch_size 512 --batches 10000
 
-However the model is combining the two inputs in an arbitrary way:
+| Loss | First Weight | Second Weight |
+| :---:        |     :---:      |         :---: |
+| ![3-layer loss with spurious input and negative examples](figures/spurious_3layer_big_batch_negative_loss.png) | ![3-layer correlation 1 with spurious input and negative examples](figures/spurious_3layer_big_batch_negative_input_1_correlation.png) | ![3-layer correlation 2 with spurious input and negative examples](figures/spurious_3layer_big_batch_negative_input_2_correlation.png) |
 
-![Two variable input 1 parameter convergence](two_variable_overfit_input_1_weights.png)
-![Two variable input 2 parameter convergence](two_variable_overfit_input_1_weights.png)
+The results aren't fundamentally different than they were before, but now convergence is much
+better. Without a negative correlation there is a chance that the network will learn some
+correlation to something that is positively correlated but unecessary. This is the "overfitting"
+problem that seems to cause a lot of lost sleep, but with even a small anticorrelation this will not
+happen.
 
-This is not surprising as the inputs are exactly the same and this model has only 1 layer.
-
-
-# More complications
-
-If the "tell" only occurs in 90% of left curves then the parameters for the "tell" should be learned
-more slowly than the parameters for the road itself so early stopping may look like the correct
-thing to do. Try running this command and see how the parameters are tuned:
-
-> python3 fitter.py --correlations 1.0 0.9 --anticorrelations 0.0 0.0 --layers 1
-
-In this case the correlation of `1.0` is the correlation of the road to the output and the
-correlation of `0.9` is the correlation of the "tell". An example loss curve is:
-
-![Loss with tell](example_overfit_1.png)
-
-If training is perfect then the weight for the first parameter should converge to 1 and the weight
-of the second should converge to 0:
-
-![Tell first parameter convergence](example_overfit_1_input_1_weights.png)
-![Tell second parameter convergence](example_overfit_1_input_2_weights.png)
-
-In some of the trials it is taking a while to converge to the right place, but things do seem to go
-in the correct direction. What if the "tell" has a different correlation to our desired output
-though? For example, what if the "tell" is always present when turning left, but also shows up 20%
-of the time when not turning left.
-
-> python3 fitter.py --correlations 1.0 1.0 --anticorrelations 0.0 0.2 --layers 1
-
-This seems to be much harder, with the network take a long time to converge:
-
-![Loss with tell](example_overfit_2.png)
-
-Weights do still converge to the correct values though:
-
-![Tell first parameter convergence](example_overfit_2_input_1_weights.png)
-![Tell second parameter convergence](example_overfit_2_input_2_weights.png)
-
-Now what happens if our label is noisy and, for some reason, the road input is not always present?
-
-> python3 fitter.py --correlations 0.99 1.0 --anticorrelations 0.0 0.2 --layers 1
-
-This feels like it should be harder, but we actually see the network converging faster:
-
-![Loss with tell](example_overfit_3.png)
-
-The trend holds in the weights as well:
-
-![Tell first parameter convergence](example_overfit_3_input_1_weights.png)
-![Tell second parameter convergence](example_overfit_3_input_2_weights.png)
+Neural networks are not magic, we should not expect that we can just turn a crank with any trashy
+input data and expect gold to come out.
+![NeuralNetworkMagic](figures/NeuralNetworkMagicByLarryJackel.png)
